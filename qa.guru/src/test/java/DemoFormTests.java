@@ -28,8 +28,7 @@ public class DemoFormTests {
         $("[class*='datepicker__day--010']").click();
         $("#subjectsInput").setValue("Arts").pressEnter();
         $("[for*='hobbies-checkbox-2']").click();
-        File file = new File(
-                "/Users/liza/study-projets/qaguru-hw1/qa.guru/src/test/resources/b2b.jpg");
+        File file = new File("src/test/resources/b2b.jpg");
         $("[class*='form-control-file']").uploadFile(file);
         $("#currentAddress").setValue("Tomsk, Lenina 56-2");
         $("#react-select-3-input").setValue("Haryana").pressEnter();
