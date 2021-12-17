@@ -39,8 +39,4 @@ target/
 .settings/org.eclipse.buildship.core.prefs
 .vscode
 /gradlew
-<<<<<<< HEAD
 /gradlew.bat
-=======
-/gradlew.bat
->>>>>>> origin/master
