@@ -1,3 +1,5 @@
+package hm1;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,14 +15,18 @@ public class DemoFormTests {
     @BeforeAll
     static void beforeAll(){
         Configuration.startMaximized = true;
+        Configuration.baseUrl = "https://demoqa.com";
+        //Configuration.holdBrowserOpen = true;
     }
     @Test
     void fillDataFormTest(){
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         $("#firstName").setValue("Liza");
         $("#lastName").setValue("Petrova");
         $("#userEmail").setValue("petro@mail.ru");
         $("[for='gender-radio-1']").click();
+        //$("#gender-radio-3").parent().click(); new variant for radio-button
+        //$("#genterWrapper").$(byText("Other")).click();   other variant for radio-button
         $("#userNumber").setValue("89009000505");
         $("#dateOfBirthInput").click();
         $("[class*='month-select']").selectOptionByValue("5");
